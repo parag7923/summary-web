@@ -1,0 +1,16 @@
+flask
+transformers
+langchain
+pdf2image
+easyocr
+python-docx
+
+PyPDF2
+pypdf
+langchain-community
+accelerate>=0.26.0
+
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch
+torchvision
+
