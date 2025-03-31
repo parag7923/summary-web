@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI-Powered Document Summary</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📄 AI-Powered Document Summary</h1>
+      <p>Upload your PDF or Image for AI-generated summaries!</p>
+    </header>
+    
+    <form id="upload-form" enctype="multipart/form-data" method="post">
+      <div class="upload-section">
+        <label class="custom-file-upload">
+          <input type="file" id="file" name="file" accept=".pdf,.png,.jpg,.jpeg" required />
+          📤 Upload PDF or Image
+        </label>
+
+        <select id="summary-length" class="styled-select">
+          <option value="short">Short Summary</option>
+          <option value="long">Long Summary</option>
+        </select>
+
+        <button type="submit" class="upload-btn">Generate Summary</button>
+      </div>
+      <p id="file-name">No file chosen</p>
+    </form>
+
+    <div id="processing" class="hidden">
+      <p>⏳ Processing your file. Please wait...</p>
+    </div>
+
+    <div id="result" class="hidden">
+      <h2>📝 Summary Result</h2>
+      <p><strong>Summary Length:</strong> <span id="summaryType">Short</span></p>
+      <p id="summaryText">Your summary will appear here...</p>
+      <div id="download-btn-container"></div>
+    </div>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
